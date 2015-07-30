@@ -1,13 +1,8 @@
 #-------------------
-# set common include folder for module
-#-------------------
-set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/sample)
-
-#-------------------
 # Test
 #-------------------
 set(TEST_NAME sample_test)
-include_directories(${GTEST_INCLUDE_DIRS} ${COMMON_INCLUDES})
+include_directories(${GTEST_INCLUDE_DIRS})
 
 file(GLOB TEST_SRC_FILES test/*.cpp)
 add_executable(${TEST_NAME} ${TEST_SRC_FILES})
