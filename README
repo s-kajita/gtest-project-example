@@ -1,0 +1,14 @@
+Here the short sample how-to use Google C++ Test Framework in cmake project
+Learned from https://github.com/snikulov/google-test-examples.git
+
+1. Google test will be downloaded from svn and build with you project
+
+How to use:
+
+1. cd gtest-project-example
+2. mkdir build
+3. cd build
+4. cmake ..
+5. make
+6a. ctest -VV
+6b. ./gtest-project-example_test --gtest_output="xml:./test.xml"
