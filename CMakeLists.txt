@@ -11,4 +11,5 @@ endif()
 
 add_subdirectory(gtest)
 add_subdirectory(src)
+add_subdirectory(sample)
 

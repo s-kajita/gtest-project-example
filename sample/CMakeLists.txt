@@ -1,21 +1,12 @@
 #-------------------
 # set common include folder for module
 #-------------------
-set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/src)
-
-#-------------------
-# Module source
-#-------------------
-set(PROJECT_LIB_NAME ${PROJECT_NAME_STR}_impl)
-
-file(GLOB SRC_FILES "*.cpp")
-add_library(${PROJECT_LIB_NAME} ${SRC_FILES})
-add_executable(cpp_sort_impl cpp_sort_impl.cpp)
+set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/sample)
 
 #-------------------
 # Test
 #-------------------
-set(TEST_NAME src_test)
+set(TEST_NAME sample_test)
 include_directories(${GTEST_INCLUDE_DIRS} ${COMMON_INCLUDES})
 
 file(GLOB TEST_SRC_FILES test/*.cpp)
@@ -32,4 +23,4 @@ endif()
 
 target_link_libraries(${TEST_NAME} ${CMAKE_THREAD_LIBS_INIT})
 
-add_test(test1 ${TEST_NAME})
+add_test(test2 ${TEST_NAME})
