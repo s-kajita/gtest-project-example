@@ -10,5 +10,10 @@ How to use:
 3. cd build
 4. cmake ..
 5. make
-6a. ctest -VV
-6b. ./gtest-project-example_test --gtest_output="xml:./test.xml"
+6. ctest -VV
+
+How to get xml report:
+
+  $ export GTEST_OUTPUT="xml:/tmp/gtest.xml"
+  $ ctest
+  $ cat /tmp/gtest.xml
