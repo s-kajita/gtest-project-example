@@ -12,4 +12,4 @@ endif()
 add_subdirectory(gtest)
 add_subdirectory(src)
 add_subdirectory(sample)
-
+add_subdirectory(sample_str)
