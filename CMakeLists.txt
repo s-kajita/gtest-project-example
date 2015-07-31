@@ -3,6 +3,7 @@ set(PROJECT_NAME_STR my-gtest)
 project(${PROJECT_NAME_STR} C CXX)
 
 find_package(Threads REQUIRED)
+include(CTest)
 enable_testing()
 
 if(CMAKE_COMPILER_IS_GNUCXX)
