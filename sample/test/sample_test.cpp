@@ -2,7 +2,7 @@
 
 TEST(SampleTest, One)
 {
-  EXPECT_EQ(true, (1==2));
+  EXPECT_EQ(true, (1==1));
 }
 
 TEST(SampleTest, Two)
