@@ -12,8 +12,12 @@ How to use:
 5. make
 6. ctest -VV
 
-How to get xml report:
-
+Get xml report for each google test:
   $ export GTEST_OUTPUT="xml:/tmp/gtest.xml"
-  $ ctest
+  $ cd build/src
+  $ ./src_test
   $ cat /tmp/gtest.xml
+
+Jenkins shell script setting (xml report of ctest)
+   /usr/bin/ctest -VV -no-compress-output -T Test  || true
+
