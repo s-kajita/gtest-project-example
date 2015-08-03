@@ -5,13 +5,12 @@ project(${PROJECT_NAME_STR} C CXX)
 include(CTest)
 enable_testing()
 
-find_package(Threads REQUIRED)
-
-if(CMAKE_COMPILER_IS_GNUCXX)
-    add_definitions(-Wall -ansi -Wno-deprecated -pthread)
+if(${BUILD_GOOGLE_TEST} MATCHES "ON")
+  find_package(Threads REQUIRED)
+  add_definitions(-Wall -ansi -Wno-deprecated -pthread)
+  add_subdirectory(gtest)
 endif()
 
-add_subdirectory(gtest)
 add_subdirectory(src)
 add_subdirectory(sample)
 add_subdirectory(sample_str)
